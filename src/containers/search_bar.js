@@ -1,14 +1,19 @@
 // IMPORT OBJECTS AND METHODS
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+// IMPORT ACTION CREATOR
+import { fetchWeather } from '../actions/index';
 
 // CREATE SEARCHBAR CONTAINER
-export default class SearchBar extends Component {
+class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 		// INITIALIZE STATE
 		this.state = { term: '' };
-		// BIND THIS CONTEXT TO ONINPUTCHANGE
+		// BIND THIS CONTEXT TO METHODS
 		this.onInputChange = this.onInputChange.bind(this);
+		this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 	// CREATE ONINPUTCHANGE FUNCTION
 	onInputChange(event) {
@@ -18,8 +23,10 @@ export default class SearchBar extends Component {
 	// FUNCTION TO RUN ON FORM SUBMISSION
 	onFormSubmit(event) {
 		event.preventDefault();
-
-		// we need to go and fetch weather data
+		// GO AND FETCH WEATHER DATA
+		this.props.fetchWeather(this.state.term);
+		// CLEAR THE SEARCH BAR
+		this.setState({ term: '' });
 	}
 	// RENDER COMPONENT METHOD
 	render() {
@@ -38,3 +45,18 @@ export default class SearchBar extends Component {
 		);
 	}
 }
+// BIND FETCHWEATHER ACTION CREATOR TO DISPATCH
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({ fetchWeather }, dispatch);
+}
+// CONNECT CONTAINER TO REDUX REDUCERS
+export default connect(null, mapDispatchToProps)(SearchBar);
+
+
+
+
+
+
+
+
+
