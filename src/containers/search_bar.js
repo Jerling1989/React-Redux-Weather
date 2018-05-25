@@ -17,7 +17,6 @@ class SearchBar extends Component {
 	}
 	// CREATE ONINPUTCHANGE FUNCTION
 	onInputChange(event) {
-		console.log(event.target.value);
 		this.setState({ term: event.target.value });
 	}
 	// FUNCTION TO RUN ON FORM SUBMISSION

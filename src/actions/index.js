@@ -12,6 +12,7 @@ export function fetchWeather(city) {
 	// SEARCH URL
 	const url = `${ROOT_URL}&q=${city},us`;
 	const request = axios.get(url);
+	
 	// RETURN ACTION TYPE AND PAYLOAD
 	return {
 		type: FETCH_WEATHER,
