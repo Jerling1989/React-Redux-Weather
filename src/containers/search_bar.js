@@ -48,7 +48,7 @@ class SearchBar extends Component {
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ fetchWeather }, dispatch);
 }
-// CONNECT CONTAINER TO REDUX REDUCERS
+// CONNECT REACT CONTAINER TO REDUX REDUCERS
 export default connect(null, mapDispatchToProps)(SearchBar);
 
 

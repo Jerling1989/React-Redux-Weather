@@ -1,4 +1,4 @@
-// IMPORT METHOD FROM REDUX
+// IMPORT FUNCTION FROM REDUX
 import { combineReducers } from 'redux';
 // IMPORT REDUCERS
 import WeatherReducer from './reducer_weather';
