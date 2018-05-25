@@ -1,7 +1,20 @@
+// IMPORT OBJECT AND METHODS
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// CREATE WEATHERLIST CONTAINER
 class WeatherList extends Component {
+	// CREATE RENDERWEATHER FUNCTION
+	renderWeather(cityData) {
+		const name = cityData.city.name;
+		// RETURN NAME OF CITY
+		return (
+			<tr key={name}>
+				<td>{name}</td>
+			</tr>
+		);
+	}
+	// RENDER COMPONENT METHOD
 	render() {
 		return (
 			<table className="table table-hover">
@@ -14,16 +27,16 @@ class WeatherList extends Component {
 					</tr>
 				</thead>
 				<tbody>
-
+					{this.props.weather.map(this.renderWeather)}
 				</tbody>
 			</table>
 		);
 	}
 }
 
-// BIND FETCHWEATHER ACTION CREATOR TO DISPATCH
+// BIND WEATHER STATE FROM REDUCER_WEATHER TO CONTAINER
 function mapStateToProps({ weather }) {
 	return { weather };
 }
-// CONNECT REACT CONTAINER TO REDUX REDUCERS
+// CONNECT REACT CONTAINER TO REDUX REDUCER
 export default connect(mapStateToProps)(WeatherList);
