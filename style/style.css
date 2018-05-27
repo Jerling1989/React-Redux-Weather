@@ -1,0 +1,13 @@
+h2 {
+	text-align: center;
+}
+
+td, th {
+	vertical-align: middle !important;
+	text-align: center !important;
+}
+
+/*input-group {
+	margin: 20px 0px;
+}*/
+
