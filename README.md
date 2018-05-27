@@ -8,3 +8,6 @@ This is a weather data aggregation app created with React and Redux. It was buil
 
 - Once the user searches for a city the app will return some weather data. The data will appear on the app from left to right in the following order. There is a Google Maps widget that shows a map of the city the user entered, next there is a chart showing the temperature for the next five days with a median temperater bar in the middle or the chart and the median temperature displayed underneath the chart, the same format is true for the other two charts displaying atmospheric pressure and humidity percentage.
 ![CITY SEARCH](/read_me/2-city.png)
+
+- THREE
+![MULTIPLE CITIES](/read_me/3-cities.png)
