@@ -3,5 +3,5 @@ This is a weather data aggregation app created with React and Redux. It was buil
 
 ---
 
-- ONE
+- When the user first opens the app they will see a pretty empty screen before they enter a city to search for weather. There is a simple heading with the name of the app and a form input below for the user to enter a search query.
 ![FIRST SCREEN](/read_me/1-first.png)
