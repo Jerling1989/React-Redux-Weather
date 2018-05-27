@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // IMPORT CHART COMPONENT
 import Chart from '../components/chart';
+import GoogleMap from '../components/google_map';
 
 // CREATE WEATHERLIST CONTAINER
 class WeatherList extends Component {
@@ -13,11 +14,14 @@ class WeatherList extends Component {
 		const temps = cityData.list.map(weather => ((weather.main.temp - 273.15) * 1.8) + 32);
 		const pressures = cityData.list.map(weather => weather.main.pressure);
 		const humidities = cityData.list.map(weather => weather.main.humidity);
+		// CREATE LOCATION DATA VARIABLES
+		const { lon, lat } = cityData.city.coord;
+		
 
 		// RETURN WEATHER DATA
 		return (
 			<tr key={name} className="row">
-				<td className="col-xs-3">{name}</td>
+				<td className="col-xs-3"><GoogleMap lon={lon} lat={lat} />{name}</td>
 				<td className="col-xs-3"><Chart data={temps} color="orange" units="&deg;F" /></td>
 				<td className="col-xs-3"><Chart data={pressures} color="green" units="hPa" /></td>
 				<td className="col-xs-3"><Chart data={humidities} color="black" units="%" /></td>
