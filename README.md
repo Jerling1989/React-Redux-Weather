@@ -3,4 +3,5 @@ This is a weather data aggregation app created with React and Redux. It was buil
 
 ---
 
--
+- ONE
+![FIRST SCREEN](/read_me/1-first.png)
