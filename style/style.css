@@ -13,3 +13,31 @@ td:first-of-type, td:first-of-type > div {
 	margin-right: 25px;
 	margin-bottom: 8px;
 }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	td:first-of-type, td:first-of-type > div {
+		height: 134px !important;
+		width: 200px !important;
+	}
+}
+
+@media (min-width: 768px) and  (max-width: 991.98px) {
+	td:first-of-type, td:first-of-type > div {
+		height: 98px !important;
+		width: 147px !important;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	td:first-of-type, td:first-of-type > div {
+		height: 74px !important;
+		width: 111px !important;
+	}
+}
+
+@media (max-width: 575.98px) {
+	td:first-of-type, td:first-of-type > div {
+		height: 98px !important;
+		width: 147px !important;
+	}
+}

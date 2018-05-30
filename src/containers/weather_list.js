@@ -21,10 +21,10 @@ class WeatherList extends Component {
 		// RETURN WEATHER DATA
 		return (
 			<tr key={name} className="row">
-				<td className="col-xs-3"><GoogleMap lon={lon} lat={lat} />{name}</td>
-				<td className="col-xs-3"><Chart data={temps} color="orange" units="&deg;F" /></td>
-				<td className="col-xs-3"><Chart data={pressures} color="green" units="hPa" /></td>
-				<td className="col-xs-3"><Chart data={humidities} color="black" units="%" /></td>
+				<td className="col-xs-6 col-sm-3"><GoogleMap lon={lon} lat={lat} />{name}</td>
+				<td className="col-xs-6 col-sm-3"><Chart data={temps} color="orange" units="&deg;F" /></td>
+				<td className="col-xs-6 col-sm-3"><Chart data={pressures} color="green" units="hPa" /></td>
+				<td className="col-xs-6 col-sm-3"><Chart data={humidities} color="black" units="%" /></td>
 			</tr>
 		);
 	}
@@ -34,10 +34,10 @@ class WeatherList extends Component {
 			<table className="table table-hover">
 				<thead>
 					<tr className="row">
-						<th className="col-xs-3">City</th>
-						<th className="col-xs-3">Temperature (&deg;F)</th>
-						<th className="col-xs-3">Pressure (hPa)</th>
-						<th className="col-xs-3">Humidity (%)</th>
+						<th className="col-xs-6 col-sm-3">City</th>
+						<th className="col-xs-6 col-sm-3">Temperature (&deg;F)</th>
+						<th className="col-xs-6 col-sm-3">Pressure (hPa)</th>
+						<th className="col-xs-6 col-sm-3">Humidity (%)</th>
 					</tr>
 				</thead>
 				<tbody>
